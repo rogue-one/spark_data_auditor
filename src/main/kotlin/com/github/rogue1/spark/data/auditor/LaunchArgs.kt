@@ -2,6 +2,7 @@ package com.github.rogue1.spark.data.auditor
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.parameters.options.*
+import com.github.rogue1.spark.data.auditor.util.DateUtil
 import java.io.File
 
 /**
@@ -17,8 +18,8 @@ class LaunchArgs: CliktCommand("Data auditing application") {
                             .required()
 
     val runDate by option(help="run date")
-                            .convert { Util.toDate(it) }
-                            .default(Util.date(2))
+                            .convert { DateUtil.toDate(it) }
+                            .default(DateUtil.date(2))
 
     /**
      * run

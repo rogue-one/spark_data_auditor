@@ -32,6 +32,7 @@ dependencies {
     implementation("com.github.ajalt:clikt:1.3.0")
     implementation("io.github.config4k:config4k:0.4.1")
     implementation("com.typesafe:config:1.4.0")
+    implementation("com.amazonaws:aws-java-sdk-secretsmanager:1.11.699")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")

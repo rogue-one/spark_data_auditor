@@ -1,4 +1,4 @@
-package com.github.rogue1.spark.data.auditor
+package com.github.rogue1.spark.data.auditor.config
 
 import com.typesafe.config.Config
 

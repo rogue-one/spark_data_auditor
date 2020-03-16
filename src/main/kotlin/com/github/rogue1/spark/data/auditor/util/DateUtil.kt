@@ -1,11 +1,11 @@
-package com.github.rogue1.spark.data.auditor
+package com.github.rogue1.spark.data.auditor.util
 
 import java.text.SimpleDateFormat
 import java.time.Duration
 import java.time.Instant
 import java.util.*
 
-object Util {
+object DateUtil {
 
     /**
      * convert data string to date format.
@@ -21,6 +21,13 @@ object Util {
     fun date(days: Int=0): Date {
         val duration = Duration.ofDays(days.toLong())
         return Date(Instant.now().minusMillis(duration.toMillis()).toEpochMilli())
+    }
+
+    /**
+     * convert [[Date]] object to date string
+     */
+    fun dateStr(date: Date): String {
+        return SimpleDateFormat("yyyy-MM-dd").format(date)
     }
 
 }
